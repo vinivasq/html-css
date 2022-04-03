@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> <!--Tem que seguir esta ordem de source, da menor para a maior-->
+        <source media="(max-width: 725px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1025px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo audios</h1>
+    <p>Vamos aprender a reproduzir audios</p>
+    <audio preload="metadata" controls loop>
+        <source src="media/decay.mp3" type="audio/mpeg">
+        <source src="media/decay.ogg" type="audio/ogg">
+        <source src="media/decay.wav" type="audio/wav">
+        <!--WAV é muito pesado, evite usar-->
+        <p>Infelizmente, seu navegador não consegue reproduzir audio. <a href="media/decay.mp3">Clique aqui</a> para baixar o arquivo MP3</p>
+    </audio>
+     <!--neste modo, tenta reproduzir em MP3, WAV e OGG para fins de compatibilidade, desde que os arquivos estejam também formatados nos tipos citados-->
+    <!--a qualidade ta uma merda porque baixei assim-->
+
+</body>
+</html>
